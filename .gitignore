@@ -1,0 +1,14 @@
+
+Resources
+*.o
+*.obj
+*.so
+*.dll
+*.dylib
+*.exe   
+
+
+.DS_Store
+Thumbs.db
+
+.vscode/
