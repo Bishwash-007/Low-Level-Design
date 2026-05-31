@@ -118,13 +118,13 @@ export class PricingCalculator {
 export class Invoice {
   generateInvoice(products: Product[], amount: number): void {
     console.log(
-      '================================\n' +
+      '==\n' +
       '          INVOICE\n' +
-      '================================\n' +
+      '==\n' +
       products.map((p) => `- ${p.name}: $${p.price.toFixed(2)}`).join('\n') +
       `\n--------------------------------\n` +
       `Total: $${amount.toFixed(2)}\n` +
-      '================================',
+      '==',
     );
   }
 }

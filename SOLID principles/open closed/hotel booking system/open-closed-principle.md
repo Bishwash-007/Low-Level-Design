@@ -52,10 +52,10 @@ Combine objects to achieve complex behavior without modifying them.
 ```
 BookingService (CLOSED)
     ↑
-    ├─→ Uses Room (OPEN for extension)
-    ├─→ Uses PaymentStrategy (OPEN for extension)
-    ├─→ Uses PricingStrategy (OPEN for extension)
-    └─→ Uses NotificationStrategy (OPEN for extension)
+    ├─ Uses Room (OPEN for extension)
+    ├─ Uses PaymentStrategy (OPEN for extension)
+    ├─ Uses PricingStrategy (OPEN for extension)
+    └─ Uses NotificationStrategy (OPEN for extension)
 ```
 
 ### Components

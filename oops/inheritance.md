@@ -85,7 +85,7 @@ class Car extends Vehicle {
 
 ### 2. **Multi-level Inheritance**
 ```typescript
-// Chain of inheritance - grandparent → parent → child
+// Chain of inheritance - grandparent  parent  child
 class Animal {
   move(): void {
     console.log("Moving");
@@ -511,5 +511,5 @@ class Person implements Walker, Swimmer {
 
 - **UI Frameworks**: Button, TextBox inherit from Control
 - **Database ORM**: Model class inherited by User, Product, Order
-- **Game Development**: Sprite → Player, Enemy, NPC
-- **Exception Handling**: Exception → RuntimeException, IOException
+- **Game Development**: Sprite  Player, Enemy, NPC
+- **Exception Handling**: Exception  RuntimeException, IOException

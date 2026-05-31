@@ -291,10 +291,10 @@ const interest = calculator.calculateMonthlyInterest(anyAccount);
 When something goes wrong, you know exactly which class to check.
 
 ```typescript
-// If balance is wrong → Check Account and TransactionProcessor
-// If notification didn't arrive → Check NotificationService
-// If audit log is empty → Check AuditLogger
-// If interest is miscalculated → Check InterestCalculator
+// If balance is wrong  Check Account and TransactionProcessor
+// If notification didn't arrive  Check NotificationService
+// If audit log is empty  Check AuditLogger
+// If interest is miscalculated  Check InterestCalculator
 ```
 
 ## Real-World Scenarios

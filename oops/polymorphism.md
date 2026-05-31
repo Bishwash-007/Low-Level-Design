@@ -564,8 +564,8 @@ printType(v); // Output: Electric Car (not "Vehicle")
 
 ## Real-World Applications
 
-- **Stream APIs**: InputStream → FileInputStream, ByteArrayInputStream
-- **Collections**: List → ArrayList, LinkedList
-- **Drivers**: Driver interface → DatabaseDriver, PrinterDriver
-- **Frameworks**: Handler → RequestHandler, EventHandler
-- **Plugins**: Plugin interface → different implementations
+- **Stream APIs**: InputStream  FileInputStream, ByteArrayInputStream
+- **Collections**: List  ArrayList, LinkedList
+- **Drivers**: Driver interface  DatabaseDriver, PrinterDriver
+- **Frameworks**: Handler  RequestHandler, EventHandler
+- **Plugins**: Plugin interface  different implementations
