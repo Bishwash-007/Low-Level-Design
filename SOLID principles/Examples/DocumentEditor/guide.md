@@ -71,7 +71,7 @@ Create smaller, focused interfaces rather than large, general ones.
 
 #### Application to Document Editor:
 ```typescript
-// ❌ BAD: One bloated interface
+//  BAD: One bloated interface
 interface IEditor {
   saveDocument(): void;
   loadDocument(): void;
@@ -81,7 +81,7 @@ interface IEditor {
   shareDocument(): void;
 }
 
-// ✅ GOOD: Segregated interfaces
+//  GOOD: Segregated interfaces
 interface IDocumentPersistence {
   save(doc: Document): void;
   load(path: string): Document;
@@ -112,7 +112,7 @@ High-level modules should not depend on low-level modules. Both should depend on
 
 #### Application to Document Editor:
 ```typescript
-// ❌ BAD: Direct dependency on FileManager
+//  BAD: Direct dependency on FileManager
 class Editor {
   private fileManager = new FileManager();
   save() {
@@ -120,7 +120,7 @@ class Editor {
   }
 }
 
-// ✅ GOOD: Depend on abstraction
+//  GOOD: Depend on abstraction
 interface IStorage {
   save(doc: Document): void;
   load(path: string): Document;

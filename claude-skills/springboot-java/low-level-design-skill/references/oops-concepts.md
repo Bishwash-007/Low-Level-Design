@@ -68,7 +68,7 @@ public class PaymentService {
 // Definition: Bundle data and methods, hide internal state
 // Benefits: Data protection, controlled access, maintainability
 
-// ❌ VIOLATION: Public attributes, uncontrolled access
+//  VIOLATION: Public attributes, uncontrolled access
 public class BankAccountBad {
     public double balance;
     public String accountNumber;
@@ -78,7 +78,7 @@ public class BankAccountBad {
     }
 }
 
-// ✅ SOLUTION: Private attributes with controlled access
+//  SOLUTION: Private attributes with controlled access
 @Entity
 @Data
 public class BankAccount {
@@ -346,7 +346,7 @@ geometryService.analyzeShapes(shapes); // Works for all shapes!
 // Definition: Use composition instead of inheritance for flexibility
 // Benefits: Flexibility, avoids brittle hierarchies, easier to test
 
-// ❌ INHERITANCE approach - less flexible
+//  INHERITANCE approach - less flexible
 public abstract class Engine {
     public abstract void start();
 }
@@ -374,7 +374,7 @@ public class PetrolSedan extends Car {
     private PetrolEngine engine = new PetrolEngine();
 }
 
-// ✅ COMPOSITION approach - more flexible
+//  COMPOSITION approach - more flexible
 public interface Engine {
     void start();
     void stop();

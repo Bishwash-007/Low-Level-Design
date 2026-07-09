@@ -4,7 +4,7 @@
 // Definition: A class should have only one reason to change
 // Benefit: Easier to maintain, test, and modify
 
-// ❌ VIOLATION: UserService does too much
+//  VIOLATION: UserService does too much
 @Service
 public class UserServiceBad {
     private final UserRepository userRepository;
@@ -36,7 +36,7 @@ public class UserServiceBad {
     private void sendSMS(String phone) { /* ... */ }
 }
 
-// ✅ SOLUTION: Separate concerns into different services
+//  SOLUTION: Separate concerns into different services
 @Service
 public class UserService {
     private final UserRepository userRepository;
@@ -97,7 +97,7 @@ public class EmailService {
 // Definition: Open for extension, closed for modification
 // Benefit: Add features without changing existing code
 
-// ❌ VIOLATION: Adding new report type requires modifying ReportGenerator
+//  VIOLATION: Adding new report type requires modifying ReportGenerator
 @Service
 public class ReportGeneratorBad {
     public String generateReport(String type, List<Order> orders) {
@@ -116,7 +116,7 @@ public class ReportGeneratorBad {
     private String generateJSONReport(List<Order> orders) { /* ... */ return ""; }
 }
 
-// ✅ SOLUTION: Use strategy pattern for extensibility
+//  SOLUTION: Use strategy pattern for extensibility
 public interface ReportGenerator {
     String generate(List<Order> orders);
 }
@@ -173,7 +173,7 @@ public class ReportService {
 // Definition: Subtypes must be substitutable for their base types
 // Benefit: Predictable polymorphism, correct type hierarchies
 
-// ❌ VIOLATION: ElectricCar violates Vehicle interface
+//  VIOLATION: ElectricCar violates Vehicle interface
 public interface Vehicle {
     void accelerate();
     void refuel();
@@ -218,7 +218,7 @@ public class ElectricCarBad implements Vehicle {
     }
 }
 
-// ✅ SOLUTION: Create correct hierarchy
+//  SOLUTION: Create correct hierarchy
 public interface Vehicle {
     void accelerate();
     double getEnergyLevel();
@@ -278,7 +278,7 @@ public class RentalService {
 // Definition: Clients should depend on specific interfaces, not general ones
 // Benefit: Loose coupling, flexible implementations
 
-// ❌ VIOLATION: Printer interface has too many methods
+//  VIOLATION: Printer interface has too many methods
 public interface Printer {
     void print(String document);
     void scan(String filename);
@@ -312,7 +312,7 @@ public class BasicPrinterBad implements Printer {
     }
 }
 
-// ✅ SOLUTION: Segregate interfaces by capability
+//  SOLUTION: Segregate interfaces by capability
 public interface Printer {
     void print(String document);
 }
@@ -371,7 +371,7 @@ public class PrintingService {
 // Definition: Depend on abstractions, not concretions
 // Benefit: Flexible, testable, maintainable code
 
-// ❌ VIOLATION: Service directly depends on concrete implementation
+//  VIOLATION: Service directly depends on concrete implementation
 @Service
 public class UserServiceBadDI {
     private final MySQLUserRepository userRepository = new MySQLUserRepository();
@@ -387,7 +387,7 @@ public class UserServiceBadDI {
 // Problem: Cannot change database or email provider
 // Problem: Tightly coupled
 
-// ✅ SOLUTION: Depend on interfaces (abstractions)
+//  SOLUTION: Depend on interfaces (abstractions)
 public interface UserRepository {
     void save(User user);
     User findById(Long id);

@@ -112,8 +112,8 @@ springboot-java/
   4. **I** - Interface Segregation: Specific interfaces
   5. **D** - Dependency Inversion: Depend on abstractions
 - **For Each Principle**:
-  - ❌ Violation example (anti-pattern)
-  - ✅ Solution example (correct approach)
+  -  Violation example (anti-pattern)
+  -  Solution example (correct approach)
   - Benefits explained
   - When to apply
 - **Use When**: Refactoring code or making design decisions
@@ -172,14 +172,14 @@ springboot-java/
   15. Graceful shutdown hooks
 
 - **Features**:
-  - ✅ Input validation at multiple layers
-  - ✅ Comprehensive logging with request IDs
-  - ✅ Error handling with meaningful codes
-  - ✅ Database transaction management
-  - ✅ Request tracing for debugging
-  - ✅ Graceful shutdown
-  - ✅ Health check endpoints
-  - ✅ Security considerations
+  -  Input validation at multiple layers
+  -  Comprehensive logging with request IDs
+  -  Error handling with meaningful codes
+  -  Database transaction management
+  -  Request tracing for debugging
+  -  Graceful shutdown
+  -  Health check endpoints
+  -  Security considerations
 
 - **Use**: Copy as starting point for new service, customize entity/DTOs
 
@@ -197,13 +197,13 @@ springboot-java/
   9. **Proxy Pattern** - DatabaseProxy with caching (conceptual)
 
 - **Each Pattern Includes**:
-  - ✅ Input validation
-  - ✅ Error handling with try-catch
-  - ✅ Logging at key points
-  - ✅ Bounds/constraint checking
-  - ✅ Type safety
-  - ✅ Immutability where appropriate
-  - ✅ Usage examples
+  -  Input validation
+  -  Error handling with try-catch
+  -  Logging at key points
+  -  Bounds/constraint checking
+  -  Type safety
+  -  Immutability where appropriate
+  -  Usage examples
 
 - **Use**: Copy pattern implementations, adapt to your needs
 
@@ -263,8 +263,8 @@ Find detailed explanation in **references/design-patterns-guide.md**:
 
 ### Step 4: Review SOLID Principles
 Check **references/solid-principles-guide.md** to:
-- Avoid anti-patterns (❌)
-- Apply correct patterns (✅)
+- Avoid anti-patterns ()
+- Apply correct patterns ()
 - Understand trade-offs
 
 ### Step 5: Copy Template
@@ -386,24 +386,24 @@ For questions about:
 
 Before deploying to production, ensure:
 
-- ✅ Input validation on all endpoints
-- ✅ Error handling with custom exceptions
-- ✅ Logging at appropriate levels
-- ✅ Request tracing with correlation IDs
-- ✅ Database connection pooling configured
-- ✅ Transaction management on service layer
-- ✅ Graceful shutdown implemented
-- ✅ Health check endpoint available
-- ✅ Security configured (Spring Security)
-- ✅ Database migrations applied
-- ✅ Load tested for expected traffic
-- ✅ Monitoring/metrics enabled
-- ✅ Documentation generated (Swagger/OpenAPI)
-- ✅ Integration tests passing
-- ✅ Code reviewed and approved
+-  Input validation on all endpoints
+-  Error handling with custom exceptions
+-  Logging at appropriate levels
+-  Request tracing with correlation IDs
+-  Database connection pooling configured
+-  Transaction management on service layer
+-  Graceful shutdown implemented
+-  Health check endpoint available
+-  Security configured (Spring Security)
+-  Database migrations applied
+-  Load tested for expected traffic
+-  Monitoring/metrics enabled
+-  Documentation generated (Swagger/OpenAPI)
+-  Integration tests passing
+-  Code reviewed and approved
 
 ---
 
 **Last Updated**: 2024
 **Version**: 1.0
-**Status**: Production Ready ✅
+**Status**: Production Ready 

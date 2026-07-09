@@ -5,6 +5,8 @@ import {
 	SMSNotification,
 } from './products';
 
+
+// Abstract Creator
 abstract class NotificationCreator implements NotificationCreator {
 	public abstract createNotification(): Notification;
 
@@ -13,6 +15,8 @@ abstract class NotificationCreator implements NotificationCreator {
 		notification.send();
 	}
 }
+
+// Concrete Creators
 
 class EmailNotificationCreator extends NotificationCreator {
 	public createNotification(): Notification {

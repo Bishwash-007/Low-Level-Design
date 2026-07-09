@@ -1,6 +1,12 @@
+
+
+// Interface for Notification
 interface Notification {
 	send(): void;
 }
+
+
+// Concrete Notification classes
 
 class EmailNotification implements Notification {
 	send(): void {

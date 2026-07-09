@@ -6,7 +6,7 @@
 
 **Problem (Violation):**
 ```typescript
-// ❌ Violates SRP - Multiple responsibilities
+// Violates SRP - Multiple responsibilities
 class User {
   private id: string;
   private email: string;
@@ -38,7 +38,7 @@ class User {
 
 **Solution (Following SRP):**
 ```typescript
-// ✅ Follows SRP - Each class has single responsibility
+// Follows SRP - Each class has single responsibility
 
 class User {
   constructor(
@@ -111,7 +111,7 @@ const hashedPassword = passwordService.hashPassword(user.getPassword());
 
 **Problem (Violation):**
 ```typescript
-// ❌ Violates OCP - Need to modify existing code to add new payment methods
+// Violates OCP - Need to modify existing code to add new payment methods
 class PaymentProcessor {
   process(type: string, amount: number): boolean {
     if (type === 'credit-card') {
@@ -133,7 +133,7 @@ class PaymentProcessor {
 
 **Solution (Following OCP):**
 ```typescript
-// ✅ Follows OCP - Can add new payment methods without modifying existing code
+//  Follows OCP - Can add new payment methods without modifying existing code
 
 interface PaymentMethod {
   process(amount: number): boolean;
@@ -203,7 +203,7 @@ cryptoProcessor.process(50);
 
 **Problem (Violation):**
 ```typescript
-// ❌ Violates LSP - Square breaks Rectangle contract
+//  Violates LSP - Square breaks Rectangle contract
 class Rectangle {
   protected width: number = 0;
   protected height: number = 0;
@@ -249,7 +249,7 @@ testArea(new Square()); // Breaks the contract!
 
 **Solution (Following LSP):**
 ```typescript
-// ✅ Follows LSP - Common base with appropriate subtypes
+//  Follows LSP - Common base with appropriate subtypes
 
 interface Shape {
   getArea(): number;
@@ -310,7 +310,7 @@ testArea(new Square(5)); // 25
 
 **Problem (Violation):**
 ```typescript
-// ❌ Violates ISP - Fat interface forces unnecessary implementation
+//  Violates ISP - Fat interface forces unnecessary implementation
 interface Worker {
   work(): void;
   eat(): void;
@@ -335,7 +335,7 @@ class RobotWorker implements Worker {
 
 **Solution (Following ISP):**
 ```typescript
-// ✅ Follows ISP - Segregated, focused interfaces
+//  Follows ISP - Segregated, focused interfaces
 
 interface Worker {
   work(): void;
@@ -391,7 +391,7 @@ class Manager implements Worker, Manager, Eater, Sleeper {
 
 **Problem (Violation):**
 ```typescript
-// ❌ Violates DIP - Direct dependency on concrete classes
+//  Violates DIP - Direct dependency on concrete classes
 class MySQLDatabase {
   query(sql: string): any[] {
     console.log('Querying MySQL');
@@ -412,7 +412,7 @@ class UserService {
 
 **Solution (Following DIP):**
 ```typescript
-// ✅ Follows DIP - Depend on abstraction (interface)
+//  Follows DIP - Depend on abstraction (interface)
 
 interface Database {
   query(sql: string): any[];

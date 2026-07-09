@@ -49,7 +49,7 @@ processor.process(100); // Simple interface, complex implementation hidden
 
 **Example:**
 ```typescript
-// ✅ Good encapsulation
+//  Good encapsulation
 class BankAccount {
   private balance: number = 0; // Private - can't be accessed directly
   private transactionHistory: Transaction[] = [];
@@ -89,7 +89,7 @@ account.deposit(100);
 account.withdraw(50);
 console.log(account.getBalance()); // 50
 
-// ❌ Can't do this - balance is private
+//  Can't do this - balance is private
 // account.balance = -1000; // Compile error!
 ```
 
@@ -265,7 +265,7 @@ console.log(calculateTotalArea(shapes)); // Calculates correctly for each shape 
 
 **Problem with Inheritance:**
 ```typescript
-// ❌ Rigid hierarchy
+//  Rigid hierarchy
 class Animal {
   eat(): void { console.log('Eating'); }
 }
@@ -284,7 +284,7 @@ class Swimmable extends Animal {
 
 **Solution with Composition:**
 ```typescript
-// ✅ Flexible composition
+//  Flexible composition
 interface Behavior {
   perform(): void;
 }
@@ -396,10 +396,10 @@ class MySQLUserRepository implements UserRepository {
 
 ### Favor Composition Over Inheritance
 ```typescript
-// ❌ Inheritance
+//  Inheritance
 class Employee extends Person { }
 
-// ✅ Composition
+//  Composition
 class Employee {
   private person: Person;
 }
@@ -416,14 +416,14 @@ class User {
 
 ### Keep Classes Focused (Single Responsibility)
 ```typescript
-// ❌ Too many responsibilities
+//  Too many responsibilities
 class Order {
   calculateTotal() { }
   saveToDatabase() { }
   sendEmail() { }
 }
 
-// ✅ Focused classes
+//  Focused classes
 class Order { calculateTotal() { } }
 class OrderRepository { save() { } }
 class OrderEmailService { send() { } }
